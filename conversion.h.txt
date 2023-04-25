@@ -1,0 +1,9 @@
+#ifndef CONVERSION_H_
+#define CONVERSION_H_
+
+#define CM_PER_INCH 2.54
+
+double cmToInches(double cm);
+double inchesToCm(double inches);
+
+#endif /* CONVERSION_H_ */

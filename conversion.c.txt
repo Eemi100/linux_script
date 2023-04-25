@@ -1,0 +1,9 @@
+#include "conversion.h"
+
+double cmToInches(double cm) {
+    return cm / CM_PER_INCH;
+}
+
+double inchesToCm(double inches) {
+    return inches * CM_PER_INCH;
+}

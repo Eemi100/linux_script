@@ -1,0 +1,18 @@
+import random
+import string
+import sys
+
+# Get password length from command line arguments
+try:
+    password_length = int(sys.argv[1])
+except (IndexError, ValueError):
+    password_length = 8
+
+# Set the characters to use for generating the password
+characters = string.ascii_letters + string.digits
+
+# Generate the password
+password = ''.join(random.choices(characters, k=password_length))
+
+# Print the password
+print(password)

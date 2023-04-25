@@ -1,0 +1,18 @@
+CC=gcc
+CFLAGS=-Wall -Wextra -pedantic -std=c99
+OBJFILES=main.o conversion.o
+TARGET=converter
+
+default: $(TARGET)
+
+$(TARGET): $(OBJFILES)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJFILES)
+
+main.o: main.c conversion.h
+	$(CC) $(CFLAGS) -c main.c
+
+conversion.o: conversion.c conversion.h
+	$(CC) $(CFLAGS) -c conversion.c
+
+clean:
+	rm -f $(OBJFILES) $(TARGET)
